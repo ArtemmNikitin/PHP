@@ -1,31 +1,30 @@
-<?php error_reporting(-1);
+<?php error_reporting (-1) ;
 
-//$year = 1900;
-//
-//echo '<select border="1" width="100%">';
-//
-//while ($year <= 2021) {
-//    echo "<option>";
-//    echo $year;
-//    echo "</option>";
-//    $year++;
-//}
-//
-//echo '</select>';
+$goods = [
+    [
+        'title' => 'Nokia',
+        'price' => 100,
+        'qty' => 10,
+    ],
+    [
+        'title' => 'Sony',
+        'price' => 130,
+        'qty' => 8,
+    ],
+    [
+        'title' => 'Philips',
+        'price' => 21500,
+        'qty' => 15,
+    ],
+];
 
-echo '<table border="1" width="100%">';
+for ($i = 0; $i < count($goods); $i++) {
 
-$tr = 1;
-while ($tr <= 9) {
-    echo "<tr>";
-    $td = 1;
-    while ($td <= 9) {
-        $multiplication = $td * $tr;
-        echo "<td> $td * $tr = $multiplication  </td>";
-        $td++;
-    }
-    echo "</tr>";
-    $tr++;
-}
+    echo "<pre> 
+    Название товара: {$goods[$i]['title']},
+    Цена: {$goods[$i]['price']},
+    Количество: {$goods[$i]['qty']}
+ </pre>";
 
-echo '</table>';
+
+};
